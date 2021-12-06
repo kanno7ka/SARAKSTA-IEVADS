@@ -1,9 +1,12 @@
-#Izveodot funkciju, kas izvada saraksta elementus.Funkcijas parametri - elementu daudzums .saraksts.
-def izdruka(dauzums, sar1):
-  for elem in range(0,daudzums):
-    print(sar1[elem])
-  return 0
+#Izveidot funkciju,kas pārbauda, vai skaitlis atrodas lietotāja noteiktā diapazonā vai nē.
+def noteiktDiapazonu(d1,d2,sk):
+  rezultats = "Skaitlis nav diapazonā!"
+  if d1>=sk<=d2:
+    rezultats = "Skaitlis ir diapazonā!"
+    return rezultats
 
-saraksts = [2,4,5,6,1,2,5]
-daudzums = int(input("Ievadi elementu skaitu: "))
-rez = izdruka(daudzums, saraksts)
+d1 = int(input("Ievadi diapazona: "))
+d2 = int(input("Ievadi diapazona beigas: "))
+sk = int(input("Ievadi skaitli: "))
+rez = noteiktDiapazonu(d1,d2,sk)
+print(rez)
